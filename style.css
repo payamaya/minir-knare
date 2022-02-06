@@ -1,0 +1,94 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+@keyframes example {
+    from {  background-color: aqua;}
+    to {background-color: rgb(10, 248, 78);}
+  }
+  
+body{
+     background-color: aqua;
+     background-color: rgb(0, 255, 195);
+        animation-name: example;
+        animation-duration: 4s;
+     animation-iteration-count: infinite;
+    
+}
+
+.operation{
+   align-items: center;
+   background-color: white;
+   border-color: black ;
+   border: solid rgb(73, 69, 187) 2px;
+   border-radius: 2px;
+   color:black;
+}
+#display{
+    margin: 2rem;
+    padding-top: 0.5rem;
+    border: solid rgb(156, 215, 236) 3px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 10px 4px #888888;
+}
+
+form{
+
+    position: relative;  
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: solid rgb(117, 149, 213) 5px;
+    border-radius: 5px;
+    margin: 100px;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 5px 10px 10px #888888;
+    
+}
+#show{
+    padding-left: 0.5rem;
+    text-align: center;
+    font-family:monospace;
+    color: white;
+    text-shadow: 
+    1px 2px 3px #888888,
+    1px 2px 3px #888888,
+    1px 2px 3px #888888;
+
+}
+#target{
+    padding-left: 0.5rem;
+    text-align: center;
+    font-family:monospace;
+    color:darkblue;
+    text-shadow: 
+    1px 2px 3px #888888,
+    1px 2px 3px #888888,
+    1px 2px 3px #888888;
+
+}
+button{
+    border: solid rgb(73, 69, 187) 2px;
+    border-radius: 2px;
+    margin: 0.25em;
+    padding: 0.5em;
+    color: rgb(0, 0, 0);
+}
+h1{
+    text-align: center;
+    font-family:monospace;
+    color: #f5f5f5;
+    text-shadow: 
+    1px 3px 6px #888888,
+    1px 3px 6px #0861fb,
+    1px 3px 6px #888888;
+
+}
+#res{
+  padding-left: 50%;
+}
+#clc{
+  padding-left: 50%;
+}
