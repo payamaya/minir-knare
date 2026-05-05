@@ -20,4 +20,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
       with:
-        MY_NAME: "repository"
+       repository: "minr-knare"
