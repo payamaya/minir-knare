@@ -1,11 +1,24 @@
-name: A workflow for my Hello world file
-on: push
+name: A workflow for my Hello World file
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  # Also trigger on page_build, as well as release created events
+  page_build:
+  release:
+    types: # This configuration doesn't affect the page_build event above
+      - created
 jobs:
   build:
     name: Hello world action
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: ./actions-a
-        with:
-           MY_NAME: "Mona"
+    - uses: actions/checkout@v1
+    - uses: ./action-a
+      with:
+        MY_NAME: "Mona"
