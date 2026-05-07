@@ -20,7 +20,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-       repository: "minr-knare"
+       repository: "payamaya/minr-knare"
 
   job_1:
     name: Upload File
