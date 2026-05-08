@@ -14,14 +14,6 @@ on:
     types: # This configuration doesn't affect the page_build event above
       - created
 jobs:
-  build:
-    name: Hello world action
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-      with:
-       repository: "payamaya/minr-knare"
-
   job_1:
     name: Upload File
     runs-on: ubuntu-latest
