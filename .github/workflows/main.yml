@@ -1,34 +1,22 @@
-name: A workflow for my Hello World file
-on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-  # Also trigger on page_build, as well as release created events
-  page_build:
-  release:
-    types: # This configuration doesn't affect the page_build event above
-      - created
+name: Share data between jobs
+on: push
 jobs:
   job_1:
     name: Upload File
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello World" > file.txt
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v2
         with:
           name: file
           path: file.txt
+
   job_2:
     name: Download File
     runs-on: ubuntu-latest
     needs: job_1
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v2
         with:
           name: file
       - run: cat file.txt
